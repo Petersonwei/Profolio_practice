@@ -1,0 +1,239 @@
+/*
+Colour scheme created by Vidady (Dark Metal Room Background)
+and Brandon Lim (Porsche 993 Carerra 2)
+Retrieved from color.adobe.com
+*/
+
+:root {
+    --dark1: #090B0D;
+    --dark2: #1C2226;
+    --midgrey: #425059;
+    --grey: #6C808C;
+    --lightgrey: #A4B5BF;
+    --bloodred: #730220;
+  }
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+  
+body {
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--dark1);
+}
+
+h1 {
+  color: var(--bloodred);
+}
+
+  main-content{
+    width: 100vw;
+}
+
+/* responsive grid for .main-content */
+.grid-row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr); /* creates 12 proportional columns */
+  grid-auto-rows: minmax(10vh, auto); /* auto-generated rows: sets the min height to be 10% but will expand to content */
+  gap: 16px; /* the gap between columns - best in absolute values i.e. pixels */
+  margin: 2vh 2vw; /* adds space on all sides but proportional to the screen */
+}
+
+/*Width of items in our grid-row */
+.col-1 { grid-column: span 1; }
+.col-2 { grid-column: span 2; }
+.col-3 { grid-column: span 3; }
+.col-4 { grid-column: span 4; }
+.col-5 { grid-column: span 5; }
+.col-6 { grid-column: span 6; }
+.col-7 { grid-column: span 7; }
+.col-8 { grid-column: span 8; }
+.col-9 { grid-column: span 9; }
+.col-10 { grid-column: span 10; }
+.col-11 { grid-column: span 11; }
+.col-12 { grid-column: span 12; }
+
+
+  /* Flexbox layout for overall page */
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  .flex-header-menu, .flex-footer-menu, .flex-side-menu {
+    flex-shrink: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 0px 4px 0px 4px;
+  }
+  
+  .flex-main-content {
+    flex: 1;
+  }
+
+  /* Mobile-first: These rules apply by default */
+.flex-header-menu {
+    display: none; /* Hide the header */
+}
+
+
+
+.flex-side-menu {
+    display: none; /* Show the side menu */
+}
+
+
+
+
+
+.flex-footer-menu {
+  display: grid; /* makes the footer a grid element */
+  grid-template-columns: repeat(4, 1fr); /* creates 4 columns of equal width */
+  justify-items: center; /* within each column horizontally centres the items */
+  align-items: center; /* within each column vertically centres the items */
+  padding: 2vh 5vw; /* padding top-bottom 2% of screen height and left-right 5% of the screen width */
+  text-align: center; /* centre aligns the icon and the text*/
+}
+
+
+
+
+.flex-footer-menu img {
+  width: auto; /* sets the width of each icon to 15% of the screen width */
+  height: auto; /* automatically sets the height - this keeps icons in proportion */
+  min-width: auto; /* sets a minimum width */
+  max-width: auto; /* sets a maximum width */
+}
+
+
+.main-container {
+    width: 100vw; /* Set the width to full screen */
+}
+
+/* Desktop: These rules are only applied if the screen is wider than 768px */
+@media only screen and (min-width: 1195px) {
+
+    .flex-header-menu {
+      display: grid; /* make the component a grid component */
+      grid-template-columns: auto 1fr; /* create two columns */
+      align-items: center; /* vertically center items */
+      padding: 2vh 5vw;
+    }
+    
+
+    .header-name {
+      text-align: left;
+    }
+    
+    .header-links {
+      justify-self: end;
+    }
+
+    .header-links a {
+      padding: 0 10px;
+      color: var(--lightgrey);
+      white-space: nowrap; /* prevents spaces between words causing a line break */
+    }
+    
+    .header-links a:hover {
+      border-bottom: 1px solid var(--lightgrey); /* Add a bottom border to anchor elements within .header-links on hover */
+    }
+    
+    
+    .flex-side-menu {
+        display: none; /* Show the side menu */
+    }
+
+    .flex-footer-menu {
+        display: none; /* Hide the footer */
+    }
+
+    .main-container {
+        width: 75vw;
+    }
+
+    /* make sure this is inside your media query for desktop and laptop */
+    .col-lg-1 { grid-column: span 1; }
+    .col-lg-2 { grid-column: span 2; }
+    .col-lg-3 { grid-column: span 3; }
+    .col-lg-4 { grid-column: span 4; }
+    .col-lg-5 { grid-column: span 5; }
+    .col-lg-6 { grid-column: span 6; }
+    .col-lg-7 { grid-column: span 7; }
+    .col-lg-8 { grid-column: span 8; }
+    .col-lg-9 { grid-column: span 9; }
+    .col-lg-10 { grid-column: span 10; }
+    .col-lg-11 { grid-column: span 11; }
+    .col-lg-12 { grid-column: span 12; }
+
+}
+
+/* Tablet and phones in landscape: These rules apply for screen widths between 601px and 1194px */
+@media only screen and (min-width: 601px) and (max-width: 1194px) {
+    .flex-container {
+        flex-direction: row;
+    }
+    
+    .flex-header-menu {
+      display: none; /* Hide the header */
+    }
+  
+    .flex-side-menu {
+      display: grid;
+      grid-auto-rows:min-content;
+      justify-items: start;
+      gap: 3vh;
+      text-align: center;
+    }
+
+    .flex-side-menu img {
+      width: 10vw;
+      height: auto;
+      min-width: 24px;
+      max-width: 40px;
+    }
+
+    flex-side-menu span{
+      desplay: block;
+    }
+  
+    .flex-footer-menu {
+      display: none; /* Hide the footer */
+    }
+
+    /* make sure this is inside your media query for tablets/phones in landscape */
+    .col-md-1 { grid-column: span 1; }
+    .col-md-2 { grid-column: span 2; }
+    .col-md-3 { grid-column: span 3; }
+    .col-md-4 { grid-column: span 4; }
+    .col-md-5 { grid-column: span 5; }
+    .col-md-6 { grid-column: span 6; }
+    .col-md-7 { grid-column: span 7; }
+    .col-md-8 { grid-column: span 8; }
+    .col-md-9 { grid-column: span 9; }
+    .col-md-10 { grid-column: span 10; }
+    .col-md-11 { grid-column: span 11; }
+    .col-md-12 { grid-column: span 12; }
+
+}
+
+
+/* Base styles */
+
+h1 {
+  color: var(--bloodred);
+}
+
+.nav-link {
+  color: #fff;           /* sets the link text to white */
+  text-decoration: none; /* removes the underlining */
+  font-weight: 600; /* uses the semibold from google*/
+}
+
+.text-center {
+  text-align: center;
+}
+
+
