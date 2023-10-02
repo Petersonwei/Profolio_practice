@@ -168,6 +168,10 @@ h1 {
     .col-lg-11 { grid-column: span 11; }
     .col-lg-12 { grid-column: span 12; }
 
+    .grab-text {
+      text-align: left !important;
+    }
+
 }
 
 /* Tablet and phones in landscape: These rules apply for screen widths between 601px and 1194px */
@@ -196,7 +200,7 @@ h1 {
     }
 
     flex-side-menu span{
-      desplay: block;
+      display: block;
     }
   
     .flex-footer-menu {
@@ -217,6 +221,8 @@ h1 {
     .col-md-11 { grid-column: span 11; }
     .col-md-12 { grid-column: span 12; }
 
+    
+
 }
 
 
@@ -235,5 +241,24 @@ h1 {
 .text-center {
   text-align: center;
 }
+
+.grab-text {
+  color: #fff;
+  font-weight: 200;
+  font-size: large;
+  text-align: center;
+  padding: 0 5vw;
+}
+
+.page-header {
+  color: var(--lightgrey);
+  font-weight: 600;
+  font-size: xx-large;
+  text-align: center;
+}
+
+
+
+
 
 
