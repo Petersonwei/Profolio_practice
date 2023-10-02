@@ -88,6 +88,8 @@ h1 {
 
 
 
+
+
 .flex-footer-menu {
   display: grid; /* makes the footer a grid element */
   grid-template-columns: repeat(4, 1fr); /* creates 4 columns of equal width */
@@ -255,6 +257,60 @@ h1 {
   font-weight: 600;
   font-size: xx-large;
   text-align: center;
+}
+
+
+.m-2 {
+  margin: 2vh 2vw; /* 2% margin all sides */
+}
+
+.mx-2 {
+  margin-left: 2vw; /* 2% margin left */
+  margin-right: 2vw; /* 2% margin right */
+}
+
+.my-2 {
+  margin-top: 2vh; /* 2% margin top */
+  margin-bottom: 2vh; /* 2% margin bottom */
+}
+
+.p-2 {
+  padding: 2vh 2vw; /* 2% padding all sides */
+}
+
+.px-2 {
+  padding-left: 2vw; /* 2% padding left */
+  padding-right: 2vw; /* 2% padding right */
+}
+
+.py-2 {
+  padding-top: 2vh; /* 2% padding top */
+  padding-bottom: 2vh; /* 2% padding bottom */
+}
+
+.card {
+  border: 1px solid var(--dark2);
+  border-radius: 10px;
+  box-shadow: 5px 10px 50px var(--midgrey);
+}
+
+.card-header {
+  color: white;
+  font-weight: 600;
+  font-size: larger;
+}
+
+.card-banner-image {
+  display: block;
+  margin: auto;
+  width: 80%;
+  height: 30vh;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-body-text {
+  color: white;
 }
 
 
